@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 
+import { UsersService } from './users.service';
+
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { ReposComponent } from './components/repos/repos.component';
@@ -24,7 +26,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
