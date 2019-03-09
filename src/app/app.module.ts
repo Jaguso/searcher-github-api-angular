@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { UsersService } from './users.service';
 
@@ -12,8 +13,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 
 const routes: Routes = [
-  { path: '', component: UsersComponent },
-  { path: 'repos', component: ReposComponent }
+  { path: 'users', component: UsersComponent },
+  { path: 'repos', component: ReposComponent },
+  { path: '', component: HeroesComponent }
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
