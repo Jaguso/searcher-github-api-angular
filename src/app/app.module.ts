@@ -13,9 +13,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 
 const routes: Routes = [
-  { path: 'users', component: UsersComponent },
+  { path: '', component: UsersComponent },
   { path: 'repos', component: ReposComponent },
-  { path: '', component: HeroesComponent }
+  // { path: '', component: HeroesComponent }
 ];
 
 @NgModule({
