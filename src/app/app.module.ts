@@ -9,18 +9,20 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
   { path: 'repos', component: ReposComponent }
-]
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     ReposComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
