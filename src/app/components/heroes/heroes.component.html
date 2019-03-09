@@ -1,8 +1,8 @@
 <div>
-  <h3>This is hero {{hero.name}} with id {{hero.id}}</h3>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
-  </div>
+  <h2>My Heroes</h2>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <p>{{hero.id}}, name: {{hero.name}}</p>
+    </li>
+  </ul>
 </div>
