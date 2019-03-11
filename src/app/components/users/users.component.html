@@ -1,8 +1,23 @@
 <div class="container">
   <ul>
     <li *ngFor="let user of users">
-      <p>{{user.login}}</p>
-      <p>{{user.url}}</p>
+      <ul>
+        <li>
+          username: {{user.login}}
+        </li>
+        <li>
+          id: {{user.id}}
+        </li>
+        <li>
+          node id: {{user.node_id}}
+        </li>
+        <li>
+          avatar: {{user.avatar_url}}
+        </li>
+        <li>
+          user url: {{user.url}}
+        </li>
+      </ul>
     </li>
   </ul>
 

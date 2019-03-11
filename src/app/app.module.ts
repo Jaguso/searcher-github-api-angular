@@ -11,10 +11,12 @@ import { UsersComponent } from './components/users/users.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
+import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
   { path: 'repos', component: ReposComponent },
+  { path: 'users/:name', component: UserComponent }
   // { path: '', component: HeroesComponent }
 ];
 
@@ -24,7 +26,8 @@ const routes: Routes = [
     UsersComponent,
     ReposComponent,
     NavbarComponent,
-    HeroesComponent
+    HeroesComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

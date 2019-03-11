@@ -13,4 +13,8 @@ export class UsersService {
   getUsers() {
     return this.http.get(`${this.uri}/users`);
   }
+
+  getUserByName(name) {
+    return this.http.get(`${this.uri}/users/${name}`);
+  }
 }
