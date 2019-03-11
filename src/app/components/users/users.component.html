@@ -3,7 +3,8 @@
     <li *ngFor="let user of users">
       <ul>
         <li>
-          username: {{user.login}}
+          username: 
+          <a href="/users/{{user.login}}">{{user.login}}</a>
         </li>
         <li>
           id: {{user.id}}
