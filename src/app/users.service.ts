@@ -17,4 +17,8 @@ export class UsersService {
   getUserByName(name) {
     return this.http.get(`${this.uri}/users/${name}`);
   }
+
+  getRepos(name) {
+    return this.http.get(`${this.uri}/users/${name}/repos`)
+  }
 }

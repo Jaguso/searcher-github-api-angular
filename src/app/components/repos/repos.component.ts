@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Repos } from '../../repos.model';
+import { UsersService } from '../../users.service';
 
 @Component({
   selector: 'app-repos',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReposComponent implements OnInit {
 
-  constructor() { }
+  name: String;
+  repos: Repos[];
+
+  constructor(private usersService: UsersService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.name = params.name;
+      this.usersService
+        .getRepos(this.name)
+        .subscribe((data: Repos[]) => {
+          this.repos = data;
+          console.log(this.repos)
+        });
+    });
   }
 
 }
