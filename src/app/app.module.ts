@@ -12,9 +12,12 @@ import { ReposComponent } from './components/repos/repos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { UserComponent } from './components/user/user.component';
+import { SearchTestComponent } from './components/search-test/search-test.component';
+
+import { FilterPipe } from './pipes/filter.pipe';
 
 const routes: Routes = [
-  { path: '', component: UsersComponent },
+  { path: '', component: SearchTestComponent },
   { path: 'repos', component: ReposComponent },
   { path: 'users/:name', component: UserComponent },
   { path: 'repos/:name', component: ReposComponent }
@@ -28,7 +31,9 @@ const routes: Routes = [
     ReposComponent,
     NavbarComponent,
     HeroesComponent,
-    UserComponent
+    UserComponent,
+    SearchTestComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
