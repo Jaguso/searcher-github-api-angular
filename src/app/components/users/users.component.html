@@ -1,28 +1,37 @@
 <div class="container">
-  <ul>
-    <li *ngFor="let user of users">
-      <ul>
-        <li>
-          username: 
-          <a href="/users/{{user.login}}">{{user.login}}</a>
-        </li>
-        <li>
-          id: {{user.id}}
-        </li>
-        <li>
-          node id: {{user.node_id}}
-        </li>
-        <li>
-          avatar: {{user.avatar_url}}
-        </li>
-        <li>
-          user url: {{user.url}}
-        </li>
-        <li>
-          <a href="repos/{{user.login}}">Watch repositories of this user</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div class="form-group">
+    <label>
+      Search by username:
+      <input type="text" class="form-control" placeholder="search user"
+        style="width: 300px" [(ngModel)]="searchTerm" />
+    </label>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let user of users | userFilter: searchTerm">
+        <ul>
+          <li>
+            username: 
+            <a href="/users/{{user.login}}">{{user.login}}</a>
+          </li>
+          <li>
+            id: {{user.id}}
+          </li>
+          <li>
+            node id: {{user.node_id}}
+          </li>
+          <li>
+            avatar: {{user.avatar_url}}
+          </li>
+          <li>
+            user url: {{user.url}}
+          </li>
+          <li>
+            <a href="repos/{{user.login}}">Watch repositories of this user</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 
 </div>

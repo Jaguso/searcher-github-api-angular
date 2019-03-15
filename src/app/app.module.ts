@@ -15,9 +15,10 @@ import { UserComponent } from './components/user/user.component';
 import { SearchTestComponent } from './components/search-test/search-test.component';
 
 import { FilterPipe } from './pipes/filter.pipe';
+import { UserFilterPipe } from './pipes/user-filter.pipe';
 
 const routes: Routes = [
-  { path: '', component: SearchTestComponent },
+  { path: '', component: UsersComponent },
   { path: 'repos', component: ReposComponent },
   { path: 'users/:name', component: UserComponent },
   { path: 'repos/:name', component: ReposComponent }
@@ -33,7 +34,8 @@ const routes: Routes = [
     HeroesComponent,
     UserComponent,
     SearchTestComponent,
-    FilterPipe
+    FilterPipe,
+    UserFilterPipe
   ],
   imports: [
     BrowserModule,

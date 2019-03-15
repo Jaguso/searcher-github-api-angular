@@ -10,6 +10,7 @@ import { Users } from '../../users.model';
 export class UsersComponent implements OnInit {
 
   users: Users[];
+  searchTerm: string;
 
   constructor(private usersService: UsersService) { }
 
