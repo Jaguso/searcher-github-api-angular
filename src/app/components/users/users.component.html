@@ -6,32 +6,18 @@
         style="width: 300px" [(ngModel)]="searchTerm" />
     </label>
   </div>
-  <div>
-    <ul>
-      <li *ngFor="let user of users | userFilter: searchTerm">
-        <ul>
-          <li>
-            username: 
-            <a href="/users/{{user.login}}">{{user.login}}</a>
-          </li>
-          <li>
-            id: {{user.id}}
-          </li>
-          <li>
-            node id: {{user.node_id}}
-          </li>
-          <li>
-            avatar: {{user.avatar_url}}
-          </li>
-          <li>
-            user url: {{user.url}}
-          </li>
-          <li>
-            <a href="repos/{{user.login}}">Watch repositories of this user</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 mb-4" *ngFor="let user of users | userFilter: searchTerm">
+      <div class="card">
+        <img class="card-img-top" src="{{user.avatar_url}}" alt="avatar"/>
+        <div class="card-body">
+          <h5 class="card-title">Username: <a href="{{user.html_url}}">{{user.login}}</a></h5>
+          <h5 class="card-subtitle"><a href="repos/{{user.login}}">Watch repositories</a></h5>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>
