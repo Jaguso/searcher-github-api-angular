@@ -16,6 +16,7 @@ import { SearchTestComponent } from './components/search-test/search-test.compon
 
 import { FilterPipe } from './pipes/filter.pipe';
 import { UserFilterPipe } from './pipes/user-filter.pipe';
+import { ReposFilterPipe } from './pipes/repos-filter.pipe';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
     UserComponent,
     SearchTestComponent,
     FilterPipe,
-    UserFilterPipe
+    UserFilterPipe,
+    ReposFilterPipe
   ],
   imports: [
     BrowserModule,

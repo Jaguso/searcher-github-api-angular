@@ -12,6 +12,7 @@ export class ReposComponent implements OnInit {
 
   name: String;
   repos: Repos[];
+  searchTerm: string;
 
   constructor(private usersService: UsersService, private router: Router, private route: ActivatedRoute) { }
 
