@@ -3,5 +3,9 @@
 }
 
 .owner-repo {
-    color: brown;
+    color: #4da6ff;
+}
+
+.card-repos {
+    background-color: #e0e0d1;
 }
